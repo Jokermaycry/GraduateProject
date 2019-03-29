@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_bg"
+   >
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:elevation="5dp"
+        android:minHeight="?attr/actionBarSize"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+     android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/zhuce_border"
+        android:orientation="vertical"
+        android:id="@+id/linearLayout">
+
+        <EditText
+            android:id="@+id/getname"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/height_title"
+            android:background="@color/transparent"
+            android:drawableLeft="@drawable/zhuce_username"
+            android:drawablePadding="25dip"
+            android:hint="@string/login_username_hint"
+            android:paddingLeft="15dip"
+            android:shadowDx="0.0"
+            android:shadowDy="1.0"
+            android:shadowRadius="1.0"
+            android:textColorHint="#ffdddddd" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@drawable/zhuce_line"/>
+
+        <EditText
+            android:id="@+id/getpassword"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/height_title"
+            android:background="@color/transparent"
+            android:drawableLeft="@drawable/zhuce_password"
+            android:drawablePadding="25dip"
+            android:hint="@string/login_password_hint"
+            android:inputType="textPassword"
+            android:paddingLeft="15dip"
+            android:textColorHint="#ffdddddd" />
+
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/zhuce"
+        style="@style/Widget.Button.Base"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="注册" />
+
+</RelativeLayout>

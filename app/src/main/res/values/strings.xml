@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">易嘉</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="btn_biaobaiqiang">表白墙</string>
+    <string name="btn_xiaoyuanfuwu">校园服务</string>
+    <string name="btn_tousu">我要投诉</string>
+    <string name="btn_quanyi">权益动态</string>
+    <string name="btn_findlost">失物招领</string>
+    <string name="btn_tiaozao">跳蚤市场</string>
+    <string name="btn_shiwu">事务大厅</string>
+    <string name="btn_dianfeichongzhi">电费充值</string>
+    <string name="btn_xiaoli">校历查询</string>
+    <string name="btn_jianzhi">兼职信息</string>
+    <string name="btn_CET">考证信息</string>
+    <string name="btn_jiangzuo">讲座信息</string>
+    <string name="login_username_hint">请输入用户名&#8230;</string>
+    <string name="login_password_hint">请输入密码&#8230;</string>
+    <string name="login_email_hint">请在此输入密码&#8230;</string>
+
+
+    <string name="pull_to_refresh">下拉可以刷新</string>
+    <string name="release_to_refresh">释放立即刷新</string>
+    <string name="refreshing">正在刷新…</string>
+    <string name="not_updated_yet">暂未更新过</string>
+    <string name="updated_at">上次更新于%1$s前</string>
+    <string name="updated_just_now">刚刚更新</string>
+    <string name="time_error">时间有问题</string>
+    <string name="title_activity_web_view_dfcz">WebView_dfcz</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
+</resources>

@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    >
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="40dp">
+
+            <TextView
+                android:focusableInTouchMode="true"
+                android:focusable="true"
+                android:id="@+id/book_name"
+                android:text="我能:"
+                android:textColor="@color/colorAccent"
+                android:textSize="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+
+                android:layout_toRightOf="@+id/book_name"
+                android:hint="如提供面试经验，教你烘焙"
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="40dp">
+
+            <TextView
+                android:id="@+id/tv2"
+                android:text="数量:"
+                android:textSize="25dp"
+                android:textColor="@color/colorAccent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_toRightOf="@+id/tv2"
+                android:hint="1"
+                android:textSize="25dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </RelativeLayout>
+
+
+        <!--<RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv4"
+                android:text="年级:"
+                android:textSize="25dp"
+                android:shadowColor="@color/colorAccent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup1"
+                android:layout_toRightOf="@+id/tv4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+                <RadioButton
+                    android:checked="true"
+                    android:text="大一"
+                    android:id="@+id/rb11"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"></RadioButton>
+                <RadioButton
+                    android:checked="false"
+                    android:text="大二"
+                    android:id="@+id/rb22"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"></RadioButton>
+                <RadioButton
+                    android:checked="false"
+                    android:text="大三"
+                    android:id="@+id/rb33"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"></RadioButton>
+                <RadioButton
+                    android:checked="false"
+                    android:text="大四"
+                    android:id="@+id/rb44"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"></RadioButton>
+                <RadioButton
+                    android:checked="false"
+                    android:text="硕士"
+                    android:id="@+id/rb55"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"></RadioButton>
+                <RadioButton
+                    android:checked="false"
+                    android:text="博士"
+                    android:id="@+id/rb66"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"></RadioButton>
+                <RadioButton
+                    android:checked="false"
+                    android:text="考研"
+                    android:id="@+id/rb77"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"></RadioButton>
+                <RadioButton
+                    android:checked="false"
+                    android:text="出国"
+                    android:id="@+id/rb88"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"></RadioButton>
+                <RadioButton
+                    android:checked="false"
+                    android:text="其他"
+                    android:id="@+id/rb99"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"></RadioButton>
+            </RadioGroup>
+
+
+        </RelativeLayout>-->
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv111"
+                android:text="描述:"
+                android:textColor="@color/colorAccent"
+                android:textSize="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/detail"
+                android:layout_toRightOf="@+id/tv111"
+                android:hint="描述一下你的服务，让大家感兴趣"
+                android:layout_width="fill_parent"
+                android:inputType="textMultiLine"
+                android:background="@drawable/zhuce_border"
+                android:minLines="6"
+
+                android:maxLines="15"
+                android:gravity="top"
+                android:shadowDx="0.0"
+                android:shadowDy="1.0"
+                android:shadowRadius="1.0"
+                android:textColorHint="#ffdddddd"
+                android:singleLine="false"
+                android:scrollbars="vertical"
+                android:layout_height="wrap_content" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="40dp">
+
+            <TextView
+                android:id="@+id/book_price"
+                android:text="价格:"
+                android:textColor="@color/colorAccent"
+                android:textSize="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/price"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/book_price"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true" />
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="40dp">
+
+            <TextView
+                android:id="@+id/tv11111"
+                android:text="发货方式:"
+                android:textColor="@color/colorAccent"
+                android:textSize="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <RadioGroup
+                android:layout_toRightOf="@+id/tv11111"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:checked="true"
+                    android:text="当面交易"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <RadioButton
+                    android:text="线上交易"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RadioGroup>
+
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="40dp">
+
+            <TextView
+                android:id="@+id/book_phone"
+                android:text="联系电话:"
+                android:textSize="25dp"
+                android:textColor="@color/colorAccent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:layout_toRightOf="@+id/book_phone"
+                android:id="@+id/phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+        </RelativeLayout>
+
+        <Button
+            android:background="@color/colorAccent"
+            android:text="发布"
+            android:id="@+id/add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</ScrollView>

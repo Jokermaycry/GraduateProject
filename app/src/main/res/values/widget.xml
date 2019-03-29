@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Widget.Button.Base" parent="Widget.AppCompat.Button">
+        <item name="android:textColor">@color/color_white</item>
+        <item name="android:background">@drawable/button</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+    <style name="Widget.EditText.Base" parent="Widget.AppCompat.EditText">
+        <item name="android:background">@drawable/edittext</item>
+        <item name="android:radius">@dimen/dialog_radius</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:paddingLeft">@dimen/dialog_margin</item>
+        <item name="android:textColorHint">@color/color_hint</item>
+    </style>
+
+    <style name="Widget.Button.Zhuxiao" parent="Widget.AppCompat.Button">
+        <item name="android:textColor">@color/color_white</item>
+        <item name="android:background">@drawable/button_zhuxiao</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+
+
+</resources>

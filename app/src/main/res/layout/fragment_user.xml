@@ -1,0 +1,65 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:elevation="5dp"
+        android:minHeight="?attr/actionBarSize"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <Button
+        android:paddingTop="40dp"
+        android:id="@+id/fabude"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="我发布的" />
+    <Button
+        android:paddingTop="40dp"
+        android:id="@+id/maichude"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="我卖出的" />
+    <Button
+        android:paddingTop="40dp"
+        android:id="@+id/maichude"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="我买到的" />
+    <Button
+        android:paddingTop="40dp"
+        android:id="@+id/xiajiade"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="已下架的" />
+
+
+    <Button
+        android:paddingTop="40dp"
+        android:id="@+id/shezhi"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="资料设置" />
+
+    <Button
+        android:paddingTop="40dp"
+        android:id="@+id/zhuxiao"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.Button.Zhuxiao"
+        android:text="注销" />
+
+
+
+
+
+</LinearLayout>
