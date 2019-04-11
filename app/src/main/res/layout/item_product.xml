@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_marginBottom="30dp"
+    android:gravity="center"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="158dp"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/iv_product_image"
+            android:layout_width="158dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_product"
+            android:layout_height="158dp" />
+
+        <TextView
+            android:id="@+id/tv_product_title"
+            android:layout_width="wrap_content"
+            android:text="男士鹅绒服饰"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/common_textcolor_black"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_product_sub_title"
+            android:layout_width="wrap_content"
+            android:text="极地的迷彩感"
+            android:textSize="12sp"
+            android:layout_marginTop="7.5dp"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:text="￥888"
+            android:textColor="@color/btn_red"
+            android:layout_marginTop="7.5dp"
+            android:textSize="15sp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+</LinearLayout>

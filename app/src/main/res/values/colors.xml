@@ -20,6 +20,13 @@
     <color name="base_color_text_white">#ffffff</color>
     <color name="home_item_color_bg">#f4f6f6</color>
     <color name="base_bg">#f4f6f6</color>
+
+    <color name="white">#ffffff</color>
+    <color name="common_textcolor_black">#141414</color>
+    <color name="divider_line">#e2e2e2</color>
+    <color name="btn_red">#fc3d42</color>
+    <color name="gray">#f4f4f4</color>
+    <color name="bg_color" >#ff6600</color>
     <!-- zxing -->
     <color name="color_half_transparent">#b0000000</color>
     <color name="color_transparent_bg">#80000000</color>

@@ -20,7 +20,7 @@ public class Activity_welcome extends Activity {
         setContentView(R.layout.activity_qidong);
         welcomeImg = (ImageView) this.findViewById(R.id.qidong);
         AlphaAnimation anima = new AlphaAnimation(0.3f, 1.0f);
-        anima.setDuration(2000);// 设置动画显示时间
+        anima.setDuration(100);// 设置动画显示时间
         welcomeImg.startAnimation(anima);
         anima.setAnimationListener(new AnimationImpl());
     }

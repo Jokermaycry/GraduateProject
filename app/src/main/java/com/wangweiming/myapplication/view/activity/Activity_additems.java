@@ -9,9 +9,8 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.wangweiming.myapplication.R;
-import com.wangweiming.myapplication.model.Goodsbean;
+import com.wangweiming.myapplication.model.SecondHandbean;
 
-import cn.bmob.v3.Bmob;
 import cn.bmob.v3.BmobUser;
 import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.SaveListener;
@@ -24,7 +23,7 @@ public class Activity_additems extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_addtwo);
-        Bmob.initialize(this,"705250f852f808598eda658ad36535c3");
+
         user = BmobUser.getCurrentUser(BmobUser.class);//获取登录成功后的本地用户信息
         bt=(Button)findViewById(R.id.add);
         name=(EditText)findViewById(R.id.name);
@@ -51,7 +50,7 @@ public class Activity_additems extends AppCompatActivity {
         String getdetail = detail.getText().toString();
         String type="2";
 
-        Goodsbean gd = new Goodsbean();
+        SecondHandbean gd = new SecondHandbean();
         gd.setName(getname);
         gd.setPhone(getphone);
         gd.setPrice(getprice);
@@ -71,7 +70,7 @@ public class Activity_additems extends AppCompatActivity {
                 else
                 {
                     Toast.makeText(getApplication(), "请先登录", Toast.LENGTH_SHORT).show();
-                    Intent i=new Intent(getApplication(),Activity_user_denglu.class);
+                    Intent i=new Intent(getApplication(),user_denglu.class);
                     startActivity(i);
                 }
             }

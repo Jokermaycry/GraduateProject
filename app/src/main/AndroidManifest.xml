@@ -9,45 +9,45 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
+
     <application
+        android:name=".Application"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/title_bg">
-        <activity android:name="com.wangweiming.myapplication.view.activity.Activity_welcome">
+        <activity android:name=".view.activity.Activity_welcome">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <provider
             android:name="cn.bmob.v3.util.BmobContentProvider"
-            android:authorities="com.wangweiming.myapplication.BmobContentProvider">
-        </provider>
-        <activity android:name="com.wangweiming.myapplication.view.activity.Activity_user_denglu" />
-        <activity android:name="com.wangweiming.myapplication.view.activity.Activity_main" />
-        <activity android:name="com.wangweiming.myapplication.view.webview.Webview_jiaodianfei" />
-        <activity android:name="com.wangweiming.myapplication.view.activity.Activity_user_forgetpwd" />
-        <activity android:name="com.wangweiming.myapplication.view.activity.Activity_user_zhuce" />
-        <activity android:name="com.wangweiming.myapplication.view.webview.WebView_photo" />
-        <activity android:name="com.wangweiming.myapplication.view.activity.Activity_Goods" />
-        <activity android:name="com.wangweiming.myapplication.view.webview.WebView_xyfw" />
-        <activity android:name="com.wangweiming.myapplication.view.webview.WebView_xlcx" />
-        <activity android:name="com.wangweiming.myapplication.view.webview.Webview_dfcz" />
-        <activity android:name="com.wangweiming.myapplication.view.webview.WebView_jzxx" />
-        <activity android:name="com.wangweiming.myapplication.view.activity.Activity_ddccz" />
-        <activity android:name="com.wangweiming.myapplication.view.activity.Activity_dlkd" />
-        <activity android:name="com.wangweiming.myapplication.view.activity.Activity_dnwx" />
-        <activity android:name="com.wangweiming.myapplication.view.activity.Activity_xxscz" />
-        <activity android:name="com.wangweiming.myapplication.view.activity.Activity_cdcz" />
-        <activity android:name="com.wangweiming.myapplication.view.activity.Activity_ztcy" />
-        <activity android:name="com.wangweiming.myapplication.view.activity.Activity_bcfw" />
-        <activity android:name="com.wangweiming.myapplication.view.activity.Activity_eswpjy" />
-        <activity android:name="com.wangweiming.myapplication.view.activity.Activity_addbook" />
-        <activity android:name="com.wangweiming.myapplication.view.activity.Activity_additems" />
-        <activity android:name="com.wangweiming.myapplication.view.activity.Activity_addserver"></activity>
+            android:authorities="com.wangweiming.myapplication.BmobContentProvider" />
+
+        <activity android:name=".view.activity.user_denglu" />
+        <activity android:name=".view.activity.Activity_main" />
+
+        <activity android:name=".view.activity.user_forgetpwd" />
+        <activity android:name=".view.activity.user_zhuce" />
+
+        <activity android:name=".view.activity.Main_motor" />
+        <activity android:name=".view.activity.Main_kuaidi" />
+        <activity android:name=".view.activity.Main_fixcomputer" />
+        <activity android:name=".view.activity.Main_book"
+                  android:launchMode="singleTask"/>
+        <activity android:name=".view.activity.Main_field" />
+        <activity android:name=".view.activity.Main_travel" />
+        <activity android:name=".view.activity.Main_car" />
+        <activity android:name=".view.activity.Main_secondHand" />
+        <activity android:name=".view.activity.Activity_addbook" />
+        <activity android:name=".view.activity.Activity_additems" />
+        <activity android:name=".view.activity.Activity_addserver" />
+        <activity android:name=".view.activity.ProductDetailActivity" />
     </application>
 
 </manifest>

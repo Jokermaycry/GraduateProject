@@ -10,10 +10,10 @@ import com.ashokvarma.bottomnavigation.BadgeItem;
 import com.ashokvarma.bottomnavigation.BottomNavigationBar;
 import com.ashokvarma.bottomnavigation.BottomNavigationItem;
 import com.wangweiming.myapplication.R;
-import com.wangweiming.myapplication.adapter.MaintAdapter;
-import com.wangweiming.myapplication.view.fragment.Fragment_search;
+import com.wangweiming.myapplication.adapter.FragmentAdapter;
+import com.wangweiming.myapplication.view.fragment.Fragment_shopbus;
 import com.wangweiming.myapplication.view.fragment.Fragment_add;
-import com.wangweiming.myapplication.view.fragment.Fragment_item;
+
 import com.wangweiming.myapplication.view.fragment.Fragment_main;
 
 import com.wangweiming.myapplication.view.fragment.Fragment_user;
@@ -30,12 +30,7 @@ public class Activity_main extends AppCompatActivity implements BottomNavigation
     private BadgeItem badgeItem;
 
    private List<Fragment> mList;
-    private Fragment_item mclassify;
-    private Fragment_main mfrist;
-    private Fragment_add madd;
-    private Fragment_search msearch;
 
-    private Fragment_user uuser;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,16 +40,15 @@ public class Activity_main extends AppCompatActivity implements BottomNavigation
     }
     private void initViewPager() {
         mList = new ArrayList<>();
-       mList.add(new Fragment_main());
-        mList.add(new Fragment_item());
+        mList.add(new Fragment_main());
         mList.add(new Fragment_add());
-        mList.add(new Fragment_search());
+        mList.add(new Fragment_shopbus());
         mList.add(new Fragment_user());
 
 
         viewPager = (ViewPager) findViewById(R.id.viewPager);
         viewPager.setOnPageChangeListener(this);
-        MaintAdapter mainAdapter = new MaintAdapter(getSupportFragmentManager(), mList);
+        FragmentAdapter mainAdapter = new FragmentAdapter(getSupportFragmentManager(), mList);
         viewPager.setAdapter(mainAdapter); //视图加载适配器
     }
 
@@ -77,7 +71,7 @@ public class Activity_main extends AppCompatActivity implements BottomNavigation
          * 3、BottomNavigationBar.MODE_SHIFTING 不固定大小
          * 换挡模式，未选中的Item不会显示文字，选中的会显示文字。在切换的时候会有一个像换挡的动画
          */
-        bottomNavigationBar.setMode(BottomNavigationBar.BACKGROUND_STYLE_RIPPLE);
+        bottomNavigationBar.setMode(BottomNavigationBar.MODE_FIXED);
         bottomNavigationBar.setActiveColor(R.color.color_white);
         /**
          * 设置背景的样式
@@ -105,10 +99,9 @@ public class Activity_main extends AppCompatActivity implements BottomNavigation
         //bottomNavigationBar.setInActiveColor("#FFFFFF");
 
 
-        bottomNavigationBar.addItem(new BottomNavigationItem(R.drawable.home, "首页").setActiveColorResource(R.color.base_color_text_white))
-                .addItem(new BottomNavigationItem(R.drawable.view_list, "商品").setActiveColorResource(R.color.base_color_text_white))
+        bottomNavigationBar.addItem(new BottomNavigationItem(R.drawable.view_list, "首页").setActiveColorResource(R.color.base_color_text_white))
                 .addItem(new BottomNavigationItem(R.drawable.plus, "发布").setActiveColorResource(R.color.base_color_text_white))
-                .addItem(new BottomNavigationItem(R.drawable.magnify, "搜索").setActiveColorResource(R.color.base_color_text_white))
+                .addItem(new BottomNavigationItem(R.drawable.magnify, "购物车").setActiveColorResource(R.color.base_color_text_white))
                 .addItem(new BottomNavigationItem(R.drawable.account, "我的").setActiveColorResource(R.color.base_color_text_white))
                 .setFirstSelectedPosition(0)
                 .initialise(); //所有的设置需在调用该方法前完成
