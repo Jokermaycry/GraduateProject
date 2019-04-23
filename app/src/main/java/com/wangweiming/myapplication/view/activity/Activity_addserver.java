@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 import com.wangweiming.myapplication.R;
 import com.wangweiming.myapplication.model.SecondHandbean;
+import com.wangweiming.myapplication.model.Userbean;
 
 import cn.bmob.v3.BmobUser;
 import cn.bmob.v3.exception.BmobException;
@@ -18,13 +19,13 @@ import cn.bmob.v3.listener.SaveListener;
 public class Activity_addserver extends AppCompatActivity {
     Button bt;
     EditText name,price,phone,detail;
-    BmobUser user;
+    Userbean user;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_addthree);
 
-        user = BmobUser.getCurrentUser(BmobUser.class);//获取登录成功后的本地用户信息
+        user = BmobUser.getCurrentUser(Userbean.class);//获取登录成功后的本地用户信息
         bt=(Button)findViewById(R.id.add);
         name=(EditText)findViewById(R.id.name);
         price=(EditText)findViewById(R.id.price);

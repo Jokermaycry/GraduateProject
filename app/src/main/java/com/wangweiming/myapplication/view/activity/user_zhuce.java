@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.wangweiming.myapplication.R;
+import com.wangweiming.myapplication.model.Userbean;
 import com.wangweiming.myapplication.util.SharedPreferencesUtil;
 
 import cn.bmob.v3.BmobUser;
@@ -55,13 +56,13 @@ import cn.bmob.v3.listener.SaveListener;
         private void register(){
             name=getname.getText().toString();
             password=getpassword.getText().toString();
-            BmobUser user = new BmobUser();
+            Userbean user = new Userbean();
             user.setUsername(name);
             user.setPassword(password);
 
-            user.signUp(new SaveListener<BmobUser>() {
+            user.signUp(new SaveListener<Userbean>() {
                 @Override
-                public void done(BmobUser bmobUser, BmobException e) {
+                public void done(Userbean bmobUser, BmobException e) {
                     if(e==null)
                     {
                         Toast.makeText(user_zhuce.this, "注册成功", Toast.LENGTH_LONG).show();

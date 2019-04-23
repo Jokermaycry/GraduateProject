@@ -16,6 +16,7 @@ import com.bumptech.glide.Glide;
 import com.wangweiming.myapplication.R;
 import com.wangweiming.myapplication.model.Bookbean;
 import com.wangweiming.myapplication.model.ShopbusProducbean;
+import com.wangweiming.myapplication.model.Userbean;
 
 import java.util.List;
 
@@ -48,7 +49,7 @@ public class ProductDetailActivity extends AppCompatActivity {
         initaddShopBusClickListener();
     }
     private void addtoShopBus() {
-        shopbusProducbean = new ShopbusProducbean(BmobUser.getCurrentUser(BmobUser.class),bookbean,1);
+        shopbusProducbean = new ShopbusProducbean(BmobUser.getCurrentUser(Userbean.class),bookbean,1);
         shopbusProducbean.save(new SaveListener<String>() {
             @Override
             public void done(String s, BmobException e) {
@@ -98,10 +99,10 @@ public class ProductDetailActivity extends AppCompatActivity {
     private void addShopBus(){
 
         //TODO
-        if(BmobUser.getCurrentUser(BmobUser.class)!=null)
+        if(BmobUser.getCurrentUser(Userbean.class)!=null)
         {
             BmobQuery<ShopbusProducbean> query = new BmobQuery<>();
-            query.addWhereEqualTo("user",BmobUser.getCurrentUser(BmobUser.class));
+            query.addWhereEqualTo("user",BmobUser.getCurrentUser(Userbean.class));
             query.findObjects(new FindListener<ShopbusProducbean>() {
                 @Override
                 public void done(final List<ShopbusProducbean> list, BmobException e) {

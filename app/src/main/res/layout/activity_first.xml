@@ -6,176 +6,119 @@
     android:orientation="vertical"
 
     >
+
+
+    <SearchView
+        android:id="@+id/searchview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        android:imeOptions="actionDone"
+        android:iconifiedByDefault="false"
+        android:queryHint="search" />
+
+
+      <LinearLayout
+          android:orientation="vertical"
+          android:layout_width="match_parent"
+          android:layout_height="221dp">
+
+          <com.youth.banner.Banner
+              android:id="@+id/banner"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintTop_toTopOf="parent"/>
+
+      </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <ImageView
-            android:id="@+id/iv"
-            android:src="@mipmap/home_head"
-            android:scaleType="centerCrop"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/shape_shop_bus_bg"
+        android:layout_height="100dp">
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="221dp" />
+            android:orientation="horizontal"
+            android:paddingRight="15dp"
+            android:paddingLeft="15dp"
+            android:gravity="center_vertical"
+            android:layout_height="40dp">
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:text="其他功能"
+                android:textColor="@color/common_textcolor_black"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
         <TextView
+            android:background="@color/divider_line"
             android:layout_width="match_parent"
-            android:layout_height="20dp" />
+            android:layout_height="0.5dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/bookbtn"
+                android:layout_width="0dp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:drawableTop="@mipmap/book"
+                android:text="二手书"
+                android:textSize="12sp"
+                android:drawablePadding="3dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tv_logout"
+                android:layout_width="0dp"
+                android:visibility="invisible"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:drawableTop="@mipmap/icon_tc"
+                android:text="退出"
+                android:textSize="12sp"
+                android:drawablePadding="3dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_width="0dp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:drawableTop="@mipmap/wait_pay"
+                android:text="修改密码"
+                android:visibility="invisible"
+
+                android:textSize="12sp"
+                android:drawablePadding="3dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_width="0dp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:visibility="invisible"
+
+                android:drawableTop="@mipmap/wait_pay"
+                android:text="关于我们"
+                android:textSize="12sp"
+                android:drawablePadding="3dp"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
 
     </LinearLayout>
 
-
-        <GridLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:columnCount="3"
-            android:rowCount="3">
-            <!--快递-->
-            <!--<FrameLayout-->
-
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content">-->
-                <!--<ImageButton-->
-                    <!--android:id="@+id/findlostBtn"-->
-                    <!--android:layout_weight="1"-->
-                    <!--android:layout_width="@dimen/main_image_width"-->
-                    <!--android:layout_height="@dimen/main_image_width"-->
-                    <!--android:layout_columnWeight="1"-->
-                    <!--android:layout_rowWeight="1"-->
-                    <!--android:background="@android:color/background_light"-->
-                    <!--android:scaleType="fitXY"-->
-                    <!--app:srcCompat="@drawable/checkbox" />-->
-
-                <!--<TextView-->
-                    <!--android:layout_gravity="bottom|center_horizontal"-->
-                    <!--android:layout_width="wrap_content"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:text="代领快递"/>-->
-            <!--</FrameLayout>-->
-            <!--&lt;!&ndash;电脑&ndash;&gt;-->
-            <!--<FrameLayout-->
-
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content">-->
-                <!--<ImageButton-->
-                    <!--android:id="@+id/quanyizhongxinBtn"-->
-                    <!--android:layout_width="@dimen/main_image_width"-->
-                    <!--android:layout_height="@dimen/main_image_width"-->
-                    <!--android:layout_columnWeight="1"-->
-                    <!--android:layout_rowWeight="1"-->
-                    <!--android:background="@android:color/background_light"-->
-                    <!--android:scaleType="fitXY"-->
-                    <!--app:srcCompat="@drawable/dnwx" />-->
-
-                <!--<TextView-->
-                    <!--android:layout_gravity="bottom|center_horizontal"-->
-                    <!--android:layout_width="wrap_content"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:text="电脑维修"/>-->
-            <!--</FrameLayout>-->
-            <!--选修书-->
-            <FrameLayout
-
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-                <ImageButton
-                    android:id="@+id/bookbtn"
-                    android:layout_width="@dimen/main_image_width"
-                    android:layout_height="@dimen/main_image_width"
-                    android:layout_columnWeight="1"
-                    android:layout_rowWeight="1"
-                    android:background="@android:color/background_light"
-                    android:scaleType="fitXY"
-                    app:srcCompat="@drawable/xxscz" />
-
-                <TextView
-                    android:layout_gravity="bottom|center_horizontal"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="选修书出租"/>
-            </FrameLayout>
-            <!--&lt;!&ndash;场地&ndash;&gt;-->
-            <!--<FrameLayout-->
-
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content">-->
-                <!--<ImageButton-->
-                    <!--android:id="@+id/tiaozaoshichangBtn"-->
-                    <!--android:layout_width="@dimen/main_image_width"-->
-                    <!--android:layout_height="@dimen/main_image_width"-->
-                    <!--android:layout_columnWeight="1"-->
-                    <!--android:layout_rowWeight="1"-->
-                    <!--android:background="@android:color/background_light"-->
-                    <!--android:scaleType="fitXY"-->
-                    <!--app:srcCompat="@drawable/cdcz" />-->
-
-                <!--<TextView-->
-                    <!--android:layout_gravity="bottom|center_horizontal"-->
-                    <!--android:layout_width="wrap_content"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:text="场地出租"/>-->
-            <!--</FrameLayout>-->
-            <!--&lt;!&ndash;组团&ndash;&gt;-->
-            <!--<FrameLayout-->
-
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content">-->
-                <!--<ImageButton-->
-                    <!--android:id="@+id/jiangzuoBtn"-->
-                    <!--android:layout_width="@dimen/main_image_width"-->
-                    <!--android:layout_height="@dimen/main_image_width"-->
-                    <!--android:layout_columnWeight="1"-->
-                    <!--android:layout_rowWeight="1"-->
-                    <!--android:background="@android:color/background_light"-->
-                    <!--android:scaleType="fitXY"-->
-                    <!--app:srcCompat="@drawable/ztcy" />-->
-
-                <!--<TextView-->
-                    <!--android:layout_gravity="bottom|center_horizontal"-->
-                    <!--android:layout_width="wrap_content"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:text="组团出游"/>-->
-            <!--</FrameLayout>-->
-            <!--&lt;!&ndash;包车&ndash;&gt;-->
-            <!--<FrameLayout-->
-
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content">-->
-                <!--<ImageButton-->
-                    <!--android:id="@+id/CETBtn"-->
-                    <!--android:layout_width="@dimen/main_image_width"-->
-                    <!--android:layout_height="@dimen/main_image_width"-->
-                    <!--android:layout_columnWeight="1"-->
-                    <!--android:layout_rowWeight="1"-->
-                    <!--android:background="@android:color/background_light"-->
-                    <!--android:scaleType="fitXY"-->
-                    <!--app:srcCompat="@drawable/bcfw" />-->
-
-                <!--<TextView-->
-                    <!--android:layout_gravity="bottom|center_horizontal"-->
-                    <!--android:layout_width="wrap_content"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:text="包车服务"/>-->
-            <!--</FrameLayout>-->
-            <!--&lt;!&ndash;二手&ndash;&gt;-->
-            <!--<FrameLayout-->
-
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content">-->
-                <!--<ImageButton-->
-                    <!--android:id="@+id/jianzhiBtn"-->
-                    <!--android:layout_width="@dimen/main_image_width"-->
-                    <!--android:layout_height="@dimen/main_image_width"-->
-                    <!--android:layout_columnWeight="1"-->
-                    <!--android:layout_rowWeight="1"-->
-                    <!--android:background="@android:color/background_light"-->
-                    <!--android:scaleType="fitXY"-->
-                    <!--app:srcCompat="@drawable/eswpjy" />-->
-
-                <!--<TextView-->
-                    <!--android:layout_gravity="bottom|center_horizontal"-->
-                    <!--android:layout_width="wrap_content"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:text="二手物品交易"/>-->
-            <!--</FrameLayout>-->
-        </GridLayout>
 
 
 </LinearLayout>

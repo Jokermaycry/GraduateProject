@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent">
 
     <TextView
         android:layout_width="match_parent"
-        android:background="@color/btn_red"
+        android:background="@color/blue"
         android:layout_height="20dp" />
 
     <RelativeLayout
@@ -15,7 +16,7 @@
 
         <TextView
             android:layout_width="match_parent"
-            android:background="@color/btn_red"
+            android:background="@color/blue"
             android:layout_height="150dp" />
 
         <LinearLayout
@@ -26,10 +27,16 @@
             android:layout_marginTop="20dp"
             android:paddingRight="15dp"
             android:layout_height="wrap_content">
-            <ImageView
-                android:layout_width="wrap_content"
-                android:src="@mipmap/icon_user"
-                android:layout_height="wrap_content" />
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/user_img"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:src="@drawable/plus"
+                app:civ_border_color="#00FFFFFF"
+                app:civ_border_width="1dp"/>
 
             <TextView
                 android:id="@+id/tv_user_name"
@@ -136,6 +143,7 @@
             android:layout_width="wrap_content"
             android:src="@mipmap/ic_service"
             android:padding="10dp"
+            android:visibility="gone"
             android:layout_alignParentRight="true"
             android:layout_height="wrap_content" />
 
@@ -206,18 +214,16 @@
                 android:gravity="center"
                 android:layout_weight="1"
                 android:drawableTop="@mipmap/wait_pay"
-                android:text="待付款"
-                android:visibility="invisible"
+                android:text="修改密码"
                 android:textSize="12sp"
                 android:drawablePadding="3dp"
                 android:layout_height="wrap_content" />
             <TextView
                 android:layout_width="0dp"
                 android:gravity="center"
-                android:visibility="invisible"
                 android:layout_weight="1"
                 android:drawableTop="@mipmap/wait_pay"
-                android:text="待付款"
+                android:text="关于我们"
                 android:textSize="12sp"
                 android:drawablePadding="3dp"
                 android:layout_height="wrap_content" />

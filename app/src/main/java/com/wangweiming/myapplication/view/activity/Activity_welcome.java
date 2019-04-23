@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 
 import android.os.Bundle;
+import android.view.View;
 import android.view.Window;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
@@ -20,8 +21,16 @@ public class Activity_welcome extends Activity {
         setContentView(R.layout.activity_qidong);
         welcomeImg = (ImageView) this.findViewById(R.id.qidong);
         AlphaAnimation anima = new AlphaAnimation(0.3f, 1.0f);
-        anima.setDuration(100);// 设置动画显示时间
+        anima.setDuration(2000);// 设置动画显示时间
         welcomeImg.startAnimation(anima);
+        welcomeImg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setClass(Activity_welcome.this, Activity_main.class);
+                startActivity(intent);
+            }
+        });
         anima.setAnimationListener(new AnimationImpl());
     }
     private class AnimationImpl implements Animation.AnimationListener

@@ -1,17 +1,16 @@
 package com.wangweiming.myapplication.model;
 
 import cn.bmob.v3.BmobObject;
-import cn.bmob.v3.BmobUser;
 
 public class ShopbusProducbean extends BmobObject {
 
-        private BmobUser user;
+        private Userbean user;
 
         private Bookbean bookbean;
 
         private int num;
 
-        public ShopbusProducbean(BmobUser user,Bookbean bookbean, int num) {
+        public ShopbusProducbean(Userbean user,Bookbean bookbean, int num) {
             this.bookbean = bookbean;
             this.num = num;
             this.user = user;
@@ -24,11 +23,11 @@ public class ShopbusProducbean extends BmobObject {
             this.num = num;
         }
 
-        public BmobUser getUser() {
+        public Userbean getUser() {
             return user;
         }
 
-        public void setUser(BmobUser user) {
+        public void setUser(Userbean user) {
             this.user = user;
         }
 

@@ -8,22 +8,21 @@
 
     <!-- TODO: Update blank fragment layout -->
 
-     <ImageView
-     android:id="@+id/Add_one"
-     android:src="@drawable/add_one"
-     android:layout_width="wrap_content"
-     android:layout_height="90dp" />
-    <ImageView
-    android:id="@+id/Add_two"
-     android:src="@drawable/add_two"
-    android:layout_width="wrap_content"
-    android:layout_height="90dp" />
-
-
-    <ImageView
-        android:id="@+id/Add_three"
-        android:src="@drawable/add_three"
-        android:layout_width="wrap_content"
-        android:layout_height="90dp" />
+    <TextView
+        android:id="@+id/tv_add_shop_bus"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:text="我要发布"
+        android:background="@color/btn_red"
+        android:layout_height="match_parent" />
+    <TextView
+        android:id="@+id/tvshop_bus"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:text="加入购物车"
+        android:background="@color/btn_red"
+        android:layout_height="match_parent" />
 
 </LinearLayout>

@@ -11,6 +11,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.wangweiming.myapplication.R;
+import com.wangweiming.myapplication.model.Userbean;
 import com.wangweiming.myapplication.util.SharedPreferencesUtil;
 
 import cn.bmob.v3.BmobUser;
@@ -22,7 +23,7 @@ public class user_denglu extends AppCompatActivity {
     EditText getname, getpassword;
     String name,password;
     Toolbar tb;
-    BmobUser user;
+    Userbean user;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -86,7 +87,7 @@ public class user_denglu extends AppCompatActivity {
         name=getname.getText().toString();
         password=getpassword.getText().toString();
 
-        user=new BmobUser();
+        user=new Userbean();
         user.setUsername(name);
         user.setPassword(password);
         user.login(new SaveListener<BmobUser>() {

@@ -8,7 +8,9 @@
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:name=".Application"
@@ -31,15 +33,14 @@
 
         <activity android:name=".view.activity.user_denglu" />
         <activity android:name=".view.activity.Activity_main" />
-
         <activity android:name=".view.activity.user_forgetpwd" />
         <activity android:name=".view.activity.user_zhuce" />
-
         <activity android:name=".view.activity.Main_motor" />
         <activity android:name=".view.activity.Main_kuaidi" />
         <activity android:name=".view.activity.Main_fixcomputer" />
-        <activity android:name=".view.activity.Main_book"
-                  android:launchMode="singleTask"/>
+        <activity
+            android:name=".view.activity.Main_book"
+            android:launchMode="singleTask" />
         <activity android:name=".view.activity.Main_field" />
         <activity android:name=".view.activity.Main_travel" />
         <activity android:name=".view.activity.Main_car" />
@@ -48,6 +49,8 @@
         <activity android:name=".view.activity.Activity_additems" />
         <activity android:name=".view.activity.Activity_addserver" />
         <activity android:name=".view.activity.ProductDetailActivity" />
+        <activity android:name=".image_selector.MultiImageSelectorActivity" />
+        <activity android:name=".image_selector.ImageSelector"></activity>
     </application>
 
 </manifest>

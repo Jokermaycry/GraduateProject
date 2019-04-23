@@ -8,6 +8,7 @@ import android.support.v7.widget.OrientationHelper;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
+import android.widget.SearchView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
@@ -20,8 +21,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import cn.bmob.v3.BmobQuery;
+import cn.bmob.v3.datatype.BmobQueryResult;
 import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.FindListener;
+import cn.bmob.v3.listener.SQLQueryListener;
 
 
 public class Main_book extends AppCompatActivity {
@@ -29,6 +32,7 @@ public class Main_book extends AppCompatActivity {
     QuickAdapter quickAdapter;
     BmobQuery<Bookbean> local ;
     RecyclerView rv;
+    SearchView searchView;
 
 
     @Override
@@ -40,6 +44,7 @@ public class Main_book extends AppCompatActivity {
         initAdapter();
         initClickListener();
         initRecyecleView();
+        initSearchView();
     }
     private void initClickListener() {
         quickAdapter.setOnItemClickListener(new QuickAdapter.OnItemClickListener() {
@@ -58,6 +63,29 @@ public class Main_book extends AppCompatActivity {
 
             }
         });
+    }
+    private void searchBook(String target) {
+        String bql ="select * from Bookbean where name = '"+target+"'";
+        Log.i("smile", "target："+target);
+        BmobQuery<Bookbean> query=new BmobQuery<Bookbean>();
+        //设置查询的SQL语句
+        query.setSQL(bql);
+        query.doSQLQuery(new SQLQueryListener<Bookbean>(){
+
+            @Override
+            public void done(BmobQueryResult<Bookbean> result, BmobException e) {
+                if(e ==null){
+
+                    bookList=result.getResults();
+                    quickAdapter.refresh(bookList);
+                    Toast.makeText(getApplication(), "查询成功", Toast.LENGTH_SHORT).show();
+                }else{
+                    Log.i("smile", "错误码："+e.getErrorCode()+"，错误描述："+e.getMessage());
+                }
+            }
+        });
+
+
     }
     private void initAdapter() {
         quickAdapter=new QuickAdapter<Bookbean>(bookList,this) {
@@ -90,6 +118,27 @@ public class Main_book extends AppCompatActivity {
             }
         };
     }
+    private void setsetOnQueryTextListener() {
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            // 当点击搜索按钮时触发该方法
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                searchBook(query);
+                return false;
+            }
+
+            // 当搜索内容改变时触发该方法
+            @Override
+            public boolean onQueryTextChange(String newText) {
+
+                return false;
+            }
+        });
+    }
+    private void initSearchView() {
+        setsetOnQueryTextListener();
+
+    }
     private void initRecyecleView() {
         rv.setLayoutManager(new GridLayoutManager(this,2, OrientationHelper.VERTICAL,false));
         rv.setAdapter(quickAdapter);
@@ -100,6 +149,7 @@ public class Main_book extends AppCompatActivity {
         bookList =new ArrayList();
         local = new BmobQuery<Bookbean>();
         rv = (RecyclerView) findViewById(R.id.rv);
+        searchView=(SearchView)findViewById(R.id.searchview);
     }
     private void initdata() {
         try {
