@@ -128,6 +128,8 @@ public class Fragment_main extends Fragment  implements OnBannerListener{
                 .setOnBannerListener(this)
                 .start();
         searchView=v.findViewById(R.id.searchview);
+        bookbtn.requestFocus();
+
 
     }
 

@@ -47,7 +47,7 @@ dependencies {
     annotationProcessor 'com.github.bumptech.glide:compiler:4.1.1'
     implementation 'de.hdodenhof:circleimageview:2.1.0'
 
-
+    implementation 'com.airsaid.library:pickerview:1.0.3'
     implementation 'com.youth.banner:banner:1.4.10'
 
     implementation 'com.jakewharton:butterknife:8.8.1'

@@ -37,16 +37,32 @@
                 android:src="@drawable/plus"
                 app:civ_border_color="#00FFFFFF"
                 app:civ_border_width="1dp"/>
-
-            <TextView
-                android:id="@+id/tv_user_name"
+            <LinearLayout
+                android:orientation="vertical"
                 android:layout_width="wrap_content"
-                android:text="null"
-                android:textColor="@color/white"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:layout_marginLeft="10dp"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tv_user_name"
+                    android:layout_width="wrap_content"
+                    android:text="null"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="10dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tv_user_balance"
+                    android:layout_width="wrap_content"
+                    android:text="余额:"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="10dp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
 
         </LinearLayout>
 
@@ -98,7 +114,7 @@
                     android:layout_width="0dp"
                     android:gravity="center"
                     android:layout_weight="1"
-                    android:drawableTop="@mipmap/wait_pay"
+                    android:drawableTop="@mipmap/alreadypay"
                     android:text="待付款"
                     android:textSize="12sp"
                     android:drawablePadding="3dp"
@@ -108,7 +124,7 @@
                     android:layout_width="0dp"
                     android:gravity="center"
                     android:layout_weight="1"
-                    android:drawableTop="@mipmap/wait_fh"
+                    android:drawableTop="@mipmap/alreadysent"
                     android:text="待发货"
                     android:textSize="12sp"
                     android:drawablePadding="3dp"
@@ -118,7 +134,7 @@
                     android:layout_width="0dp"
                     android:gravity="center"
                     android:layout_weight="1"
-                    android:drawableTop="@mipmap/wait_sh"
+                    android:drawableTop="@mipmap/needget"
                     android:text="待收货"
                     android:textSize="12sp"
                     android:drawablePadding="3dp"
@@ -128,7 +144,7 @@
                     android:layout_width="0dp"
                     android:gravity="center"
                     android:layout_weight="1"
-                    android:drawableTop="@mipmap/ic_ysh"
+                    android:drawableTop="@mipmap/alreadtget"
                     android:text="已收货"
                     android:textSize="12sp"
                     android:drawablePadding="3dp"
@@ -171,7 +187,7 @@
             <TextView
                 android:layout_weight="1"
                 android:layout_width="wrap_content"
-                android:text="其他功能"
+                android:text="我发布的"
                 android:textColor="@color/common_textcolor_black"
                 android:layout_height="wrap_content" />
 
@@ -194,8 +210,8 @@
                 android:layout_width="0dp"
                 android:gravity="center"
                 android:layout_weight="1"
-                android:drawableTop="@mipmap/ic_address"
-                android:text="地址"
+                android:drawableTop="@mipmap/asking"
+                android:text="求购中的"
                 android:textSize="12sp"
                 android:drawablePadding="3dp"
                 android:layout_height="wrap_content" />
@@ -204,8 +220,8 @@
                 android:layout_width="0dp"
                 android:gravity="center"
                 android:layout_weight="1"
-                android:drawableTop="@mipmap/icon_tc"
-                android:text="退出"
+                android:drawableTop="@mipmap/adding"
+                android:text="发布中的"
                 android:textSize="12sp"
                 android:drawablePadding="3dp"
                 android:layout_height="wrap_content" />
@@ -213,8 +229,8 @@
                 android:layout_width="0dp"
                 android:gravity="center"
                 android:layout_weight="1"
-                android:drawableTop="@mipmap/wait_pay"
-                android:text="修改密码"
+                android:drawableTop="@mipmap/outtime"
+                android:text="过期的"
                 android:textSize="12sp"
                 android:drawablePadding="3dp"
                 android:layout_height="wrap_content" />
@@ -222,6 +238,7 @@
                 android:layout_width="0dp"
                 android:gravity="center"
                 android:layout_weight="1"
+                android:visibility="invisible"
                 android:drawableTop="@mipmap/wait_pay"
                 android:text="关于我们"
                 android:textSize="12sp"
@@ -230,7 +247,96 @@
 
         </LinearLayout>
 
+
+
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/shape_shop_bus_bg"
+        android:layout_height="100dp">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:paddingRight="15dp"
+            android:paddingLeft="15dp"
+            android:gravity="center_vertical"
+            android:layout_height="40dp">
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:text="其他功能"
+                android:textColor="@color/common_textcolor_black"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:background="@color/divider_line"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/A"
+                android:layout_width="0dp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:drawableTop="@mipmap/address"
+                android:text="地址"
+                android:textSize="12sp"
+                android:drawablePadding="3dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/V"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@mipmap/exit"
+                android:drawablePadding="3dp"
+                android:gravity="center"
+                android:text="退出"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@mipmap/wait_pay"
+                android:drawablePadding="3dp"
+                android:gravity="center"
+                android:text="退出"
+                android:textSize="12sp"
+                android:visibility="invisible" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@mipmap/wait_pay"
+                android:drawablePadding="3dp"
+                android:gravity="center"
+                android:text="退出"
+                android:textSize="12sp"
+                android:visibility="invisible" />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
 </LinearLayout>

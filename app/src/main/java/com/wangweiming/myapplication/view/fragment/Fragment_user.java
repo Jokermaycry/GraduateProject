@@ -104,7 +104,7 @@ public class Fragment_user extends Fragment {
                 }
                 else {
                     Log.e("test","null");
-                    Glide.with(this).load(user.getAvatar().getFileUrl()).into(userImage);
+
                 }
 
 

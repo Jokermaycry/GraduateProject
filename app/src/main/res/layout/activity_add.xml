@@ -9,20 +9,20 @@
     <!-- TODO: Update blank fragment layout -->
 
     <TextView
-        android:id="@+id/tv_add_shop_bus"
+        android:id="@+id/iwant"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:text="我要求购"
+        android:background="@color/btn_red"
+        android:layout_height="50dp" />
+    <TextView
+        android:id="@+id/iadd"
         android:layout_width="match_parent"
         android:gravity="center"
         android:textColor="@color/white"
         android:text="我要发布"
-        android:background="@color/btn_red"
-        android:layout_height="match_parent" />
-    <TextView
-        android:id="@+id/tvshop_bus"
-        android:layout_width="match_parent"
-        android:gravity="center"
-        android:textColor="@color/white"
-        android:text="加入购物车"
-        android:background="@color/btn_red"
-        android:layout_height="match_parent" />
+        android:background="@color/blue"
+        android:layout_height="50dp" />
 
 </LinearLayout>

@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.airsaid.library:pickerview-1.0.3">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/pickerview-1.0.3.aar/ff9bdcd4615fa6315bee7a97c23bff22/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/pickerview-1.0.3.aar/ff9bdcd4615fa6315bee7a97c23bff22/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.airsaid.library/pickerview/1.0.3/df9fdeb8f75caa4ad6e8bfa816f7e2944e9eb027/pickerview-1.0.3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -50,7 +50,9 @@
         <activity android:name=".view.activity.Activity_addserver" />
         <activity android:name=".view.activity.ProductDetailActivity" />
         <activity android:name=".image_selector.MultiImageSelectorActivity" />
-        <activity android:name=".image_selector.ImageSelector"></activity>
+        <activity android:name=".image_selector.ImageSelector" />
+        <activity android:name=".view.activity.Add_iwant" />
+        <activity android:name=".view.activity.Add_isell" />
     </application>
 
 </manifest>
